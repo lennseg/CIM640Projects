@@ -13,8 +13,10 @@ var brushSize = 10;
 
 var currentArea = "";
 
-var colorArray = ["yellow","green", "black", "blue", "gold", "red"];
+var colorArray = ["green","purple", "black", "blue", "orange", "red"];
 var counter = 0;
+var currentRN = 0;
+var currentColor = "white";
 
 function setup() {
   createCanvas(400,400); 
@@ -32,8 +34,7 @@ function setup() {
 
 function draw() {
 
-  //console.log(colorArray[counter]);
-  fill(colorArray[counter]);
+  fill("gold");
   rect(boundary0, topBoundary, buttonSize, buttonSize);
   fill("gray");
   rect(boundary1, topBoundary, buttonSize, buttonSize);
@@ -46,7 +47,7 @@ function draw() {
   ellipse(mouseX, mouseY, brushSize, brushSize);
   
   console.log(currentArea);
-  if (mouseY >= topBoundary && mouseY < bottomBoundary) {
+    if (mouseY >= topBoundary && mouseY < bottomBoundary) {
     //console.log("Inside User Interface Area");
     if (mouseX > boundary0 && mouseX < boundary1) {
       //  console.log("area0");
@@ -67,15 +68,14 @@ function draw() {
 }
 
 function mousePressed() {
-  console.log(currentArea);
   if (currentArea == "area0") {
+    brushColor = (colorArray[counter]);
     //counter = counter + 1;
-  counter++;
+    counter++;
   if(counter >= colorArray.length){
-    counter = 0;
-  }
+    counter = 0;}
   }else if (currentArea == "area1") {
-    brushColor = "gray";
+    brushColor = random(colorArray);
   } else if (currentArea == "area2") {
     brushColor = "blue";
     //brushSize = brushSize + 1;
