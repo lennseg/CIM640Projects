@@ -2,7 +2,7 @@ var word = "The quick brown fox jumped over the lazy dog.";
 
 function setup() {
   
-  createCanvas(720,360);
+  createCanvas(720,300);
   textSize(30);
   
 }
