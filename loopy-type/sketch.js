@@ -1,25 +1,21 @@
-var randomHello = [];
+var word = "The quick brown fox jumped over the lazy dog.";
 
 function setup() {
   
-  createCanvas(500,500);
-  background(0);
-  fill(255);
-  textSize(25);
-  randomHello.push("The");
-  randomHello.push("quick");
-  randomHello.push("brown");
-  randomHello.push("fox");
-  randomHello.push("jumped");
-  randomHello.push("over");
-  randomHello.push("the");
-  randomHello.push("lazy");
-  randomHello.push("dog");
+  createCanvas(720,360);
+  textSize(30);
+  
 }
 
 function draw() {
-  while(randomHello.length > 0){
-    var currentHello = randomHello.pop();
-    text(currentHello, random(width), random(height));
+  frameRate(30);
+  for(var start = 0; start < 300; start ++){
+  //console.log(start)
+  noStroke();
+  ellipse(random(width), random(height), random(10), random(10));
   }
+}
+
+function mouseMoved() {
+text(word, 50, 150);
 }
