@@ -16,7 +16,7 @@ function draw() {
   }
 }
 
-function mousePressed() {
+function mouseMoved() {
 text(word, 50, 150);
 loop();
 }
