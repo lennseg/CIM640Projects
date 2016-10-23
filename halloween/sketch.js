@@ -8,6 +8,7 @@ var sevenChar = "E";
 var eightChar = "E";
 var nineChar = "N";
 
+
 function setup() {
   createCanvas(640,400);
   textSize(42);
