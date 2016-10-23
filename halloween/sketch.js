@@ -12,7 +12,6 @@ function setup() {
   createCanvas(640,400);
   textSize(42);
   textFont("Georgia");
-  
 } 
 
 
