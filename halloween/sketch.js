@@ -65,18 +65,16 @@ function draw() {
   text("allow", 100, 329);
   text("low", 308, 329);
   text("wee", 498, 329);
-
-
 }
 
-// When the user clicks the mouse
+
 function mousePressed() {
 
   // Check if mouse is inside the button
   var d = dist(mouseX, mouseY, centerBoxX, centerBoxY);
   var d2 = dist(mouseX, mouseY, centerBoxX2, centerBoxY2);
   var d3 = dist(mouseX, mouseY, centerBoxX3, centerBoxY3);
-  
+
   if (d < 40) {
     if (allowDown) {
       allowDown = false;
@@ -84,7 +82,7 @@ function mousePressed() {
       allowDown = true;
     }
   }
-  
+
   if (d2 < 40) {
     if (lowDown) {
       lowDown = false;
@@ -103,7 +101,7 @@ function mousePressed() {
     setToAllow();
   } else if (lowDown) {
     setToLow();
-  } else if (weeDown){
+  } else if (weeDown) {
     setToWee();
   } else {
     setToNone();
