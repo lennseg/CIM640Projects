@@ -92,10 +92,19 @@ function mousePressed() {
       lowDown = true;
     }
   }
+  if (d3 < 40) {
+    if (weeDown) {
+      weeDown = false;
+    } else {
+      weeDown = true;
+    }
+  }
   if (allowDown) {
     setToAllow();
   } else if (lowDown) {
     setToLow();
+  } else if (weeDown){
+    setToWee();
   } else {
     setToNone();
   }
@@ -122,6 +131,18 @@ function setToLow() {
   y6 = 200;
   y7 = 100;
   y8 = 100;
+  y9 = 100;
+}
+
+function setToWee() {
+  y1 = 100;
+  y2 = 100;
+  y3 = 100;
+  y4 = 100;
+  y5 = 100;
+  y6 = 200;
+  y7 = 200;
+  y8 = 200;
   y9 = 100;
 }
 
