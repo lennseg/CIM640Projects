@@ -18,7 +18,7 @@ var y7 = 100;
 var y8 = 100;
 var y9 = 100;
 
-var buttonfill = 51;
+var buttonfill = 0;
 
 var centerBoxX = 123;
 var centerBoxY = 320;
@@ -33,34 +33,40 @@ var allowDown = false;
 var lowDown = false;
 var weeDown = false;
 
+
 function setup() {
   createCanvas(640, 400);
   textFont("Georgia");
+  bg = loadImage("images/ghosts.jpg");
 }
 
 
 function draw() {
-  background(255, 165, 0);
+  background(bg);
 
-  fill(0);
+  fill(229,146,19);
+  noStroke();
   textSize(42);
-  text(oneChar, 100, y1);
-  text(twoChar, 150, y2);
-  text(threeChar, 200, y3);
-  text(fourChar, 250, y4);
-  text(fiveChar, 295, y5);
-  text(sixChar, 347, y6);
-  text(sevenChar, 410, y7);
-  text(eightChar, 460, y8);
-  text(nineChar, 510, y9);
+  text(oneChar, 70, y1);
+  text(twoChar, 130, y2);
+  text(threeChar, 186, y3);
+  text(fourChar, 243, y4);
+  text(fiveChar, 298, y5);
+  text(sixChar, 358, y6);
+  text(sevenChar, 430, y7);
+  text(eightChar, 485, y8);
+  text(nineChar, 540, y9);
 
   fill(buttonfill);
+  strokeWeight(1);
+  stroke(229,146,19);
   rectMode(CENTER);
   rect(centerBoxX, centerBoxY, 130, 40);
   rect(centerBoxX2, centerBoxY2, 130, 40);
   rect(centerBoxX3, centerBoxY3, 130, 40);
 
-  fill(255);
+  fill(229,146,19);
+  noStroke();
   textSize(22);
   text("allow", 100, 329);
   text("low", 308, 329);
