@@ -1,3 +1,5 @@
+//Midterm: Halloween
+
 var oneChar = "H";
 var twoChar = "A";
 var threeChar = "L";
