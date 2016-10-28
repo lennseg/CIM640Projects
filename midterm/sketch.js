@@ -54,7 +54,6 @@ function draw() {
   text(letters[7], 485, y7);
   text(letters[8], 540, y8);
 
-
   fill(buttonfill);
   strokeWeight(1);
   stroke(229, 146, 19);
@@ -79,7 +78,7 @@ function mousePressed() {
   var d2 = dist(mouseX, mouseY, centerBoxX2, centerBoxY2);
   var d3 = dist(mouseX, mouseY, centerBoxX3, centerBoxY3);
 
-  if (d1 < 40) {
+  if (d1 < 65) {
     if (allowDown) {
       allowDown = false;
     } else {
@@ -87,14 +86,14 @@ function mousePressed() {
     }
   }
 
-  if (d2 < 40) {
+  if (d2 < 65) {
     if (lowDown) {
       lowDown = false;
     } else {
       lowDown = true;
     }
   }
-  if (d3 < 40) {
+  if (d3 < 65) {
     if (weeDown) {
       weeDown = false;
     } else {
