@@ -1,6 +1,6 @@
 //Midterm: Halloween
 
-var letters = ["H", "A", "L", "L", "O", "W", "E", "E", "N"];
+var halloween = [];
 
 var y0 = 100;
 var y1 = 100;
@@ -36,6 +36,8 @@ function setup() {
   textFont("Georgia");
   textLeading(30);
   bg = loadImage("images/ghosts.jpg");
+  
+  halloween = ["H", "A", "L", "L", "O", "W", "E", "E", "N"];
 }
 
 function draw() {
@@ -44,15 +46,15 @@ function draw() {
   fill(229, 146, 19);
   noStroke();
   textSize(42);
-  text(letters[0], 60, y0);
-  text(letters[1], 120, y1);
-  text(letters[2], 180, y2);
-  text(letters[3], 240, y3);
-  text(letters[4], 300, y4);
-  text(letters[5], 360, y5);
-  text(letters[6], 430, y6);
-  text(letters[7], 485, y7);
-  text(letters[8], 540, y8);
+  text(halloween[0], 60, y0);
+  text(halloween[1], 120, y1);
+  text(halloween[2], 180, y2);
+  text(halloween[3], 240, y3);
+  text(halloween[4], 300, y4);
+  text(halloween[5], 360, y5);
+  text(halloween[6], 430, y6);
+  text(halloween[7], 485, y7);
+  text(halloween[8], 540, y8);
 
   fill(buttonfill);
   strokeWeight(1);
@@ -70,6 +72,10 @@ function draw() {
   text("wee", 499, 329);
 }
 
+function halloween(){
+  
+  
+}
 
 function mousePressed() {
 
