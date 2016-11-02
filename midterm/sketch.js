@@ -2,38 +2,39 @@
 
 var halloween = [];
 
-  var allow = {
-    x: 100,
-    y: 329,
-    display: function() {
-      fill(229, 146, 19);
-      noStroke();
-      textSize(22);
-      text("allow", this.x, this.y);
-    }
-  };
+var allow = {
+  x: 100,
+  y: 329,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(22);
+    text("allow", this.x, this.y);
+  }
+};
 
-  var low = {
-    x: 308,
-    y: 329,
-    display: function() {
-      fill(229, 146, 19);
-      noStroke();
-      textSize(22);
-      text("low", this.x, this.y);
-    }
-  };
+var low = {
+  x: 308,
+  y: 329,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(22);
+    
+    text("low", this.x, this.y);
+  }
+};
 
-  var wee = {
-    x: 499,
-    y: 329,
-    display: function() {
-      fill(229, 146, 19);
-      noStroke();
-      textSize(22);
-      text("low", this.x, this.y);
-    }
-  };
+var wee = {
+  x: 499,
+  y: 329,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(22);
+    text("wee", this.x, this.y);
+  }
+};
 
 var buttonfill = 0;
 
@@ -63,6 +64,7 @@ function setup() {
   halloween[0] = {
     x: 60,
     y: 100,
+
     display: function() {
       fill(229, 146, 19);
       noStroke();
@@ -160,6 +162,7 @@ function setup() {
   };
 }
 
+
 function draw() {
   background(bg);
   halloween[0].display();
@@ -186,12 +189,74 @@ function draw() {
 
 }
 
+// function halloween(x,y) {
+//   this.x = x;
+//   this.y = y;
+
+// }
+
 
 function mousePressed() {
 
   // Check if mouse is inside the button
-  var d1 = dist(mouseX, mouseY, centerBoxX1, centerBoxY1);
-  var d2 = dist(mouseX, mouseY, centerBoxX2, centerBoxY2);
-  var d3 = dist(mouseX, mouseY, centerBoxX3, centerBoxY3);
+  var d1 = dist(mouseX, mouseY, allow.x, allow.y);
+  var d2 = dist(mouseX, mouseY, low.x, low.y);
+  var d3 = dist(mouseX, mouseY, wee.x, wee.y);
+
+  if (d1 < 30) {
+    var allowArray = [1, 2, 3, 4, 5];
+
+    for (var i = 0; i < halloween.length; i++) {
+      halloween[i].y = 100;
+    }
+
+
+    for (var i = 0; i < allowArray.length; i++) {
+      if (halloween[allowArray[i]].y == 100) {
+        halloween[allowArray[i]].y = 200;
+      }
+    }
+
+  }
+
+  if (d2 < 30) {
+    var lowArray = [3, 4, 5];
+
+    for (var i = 0; i < halloween.length; i++) {
+      halloween[i].y = 100;
+    }
+
+
+    for (var i = 0; i < lowArray.length; i++) {
+      if (halloween[lowArray[i]].y == 100) {
+        halloween[lowArray[i]].y = 200;
+      }
+    }
+
+    console.log(d2);
+
+
+  }
+
+  if (d3 < 30) {
+    var weeArray = [5, 6, 7];
+
+    for (var i = 0; i < halloween.length; i++) {
+      halloween[i].y = 100;
+    }
+
+
+    for (var i = 0; i < weeArray.length; i++) {
+      if (halloween[weeArray[i]].y == 100) {
+        halloween[weeArray[i]].y = 200;
+      }
+    }
+
+  }
+
+
+
+
+
 
 }
