@@ -1,16 +1,136 @@
 //Midterm: Halloween
 
-var halloween = [];
+var halloween0 = {
+  x: 60,
+  y: 100,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(42);
+    text("H", this.x, this.y);
+  },
+};
 
-var y0 = 100;
-var y1 = 100;
-var y2 = 100;
-var y3 = 100;
-var y4 = 100;
-var y5 = 100;
-var y6 = 100;
-var y7 = 100;
-var y8 = 100;
+var halloween1 = {
+  x: 120,
+  y: 100,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(42);
+    text("A", this.x, this.y);
+  },
+};
+
+var halloween2 = {
+  x: 180,
+  y: 100,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(42);
+    text("L", this.x, this.y);
+  },
+};
+
+var halloween3 = {
+  x: 240,
+  y: 100,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(42);
+    text("L", this.x, this.y);
+  },
+};
+
+var halloween4 = {
+  x: 300,
+  y: 100,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(42);
+    text("O", this.x, this.y);
+  },
+};
+
+var halloween5 = {
+  x: 360,
+  y: 100,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(42);
+    text("W", this.x, this.y);
+  },
+};
+
+var halloween6 = {
+  x: 430,
+  y: 100,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(42);
+    text("E", this.x, this.y);
+  },
+};
+
+var halloween7 = {
+  x: 485,
+  y: 100,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(42);
+    text("E", this.x, this.y);
+  },
+};
+
+var halloween8 = {
+  x: 540,
+  y: 100,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(42);
+    text("N", this.x, this.y);
+  },
+};
+
+var allow = {
+  x: 100,
+  y: 329,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(22);
+    text("allow", this.x, this.y);
+  }
+};
+
+var low = {
+  x: 308,
+  y: 329,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(22);
+    text("low", this.x, this.y);
+  }
+};
+
+var wee = {
+  x: 499,
+  y: 329,
+  display: function() {
+    fill(229, 146, 19);
+    noStroke();
+    textSize(22);
+    text("low", this.x, this.y);
+  }
+};
 
 var buttonfill = 0;
 
@@ -32,29 +152,24 @@ var weeDown = false;
 
 
 function setup() {
-  createCanvas(630,390);
+  createCanvas(630, 390);
   textFont("Georgia");
   textLeading(30);
   bg = loadImage("images/ghosts.jpg");
-  
-  halloween = ["H", "A", "L", "L", "O", "W", "E", "E", "N"];
+
 }
 
 function draw() {
   background(bg);
-
-  fill(229, 146, 19);
-  noStroke();
-  textSize(42);
-  text(halloween[0], 60, y0);
-  text(halloween[1], 120, y1);
-  text(halloween[2], 180, y2);
-  text(halloween[3], 240, y3);
-  text(halloween[4], 300, y4);
-  text(halloween[5], 360, y5);
-  text(halloween[6], 430, y6);
-  text(halloween[7], 485, y7);
-  text(halloween[8], 540, y8);
+  halloween0.display();
+  halloween1.display();
+  halloween2.display();
+  halloween3.display();
+  halloween4.display();
+  halloween5.display();
+  halloween6.display();
+  halloween7.display();
+  halloween8.display();
 
   fill(buttonfill);
   strokeWeight(1);
@@ -64,18 +179,16 @@ function draw() {
   rect(centerBoxX2, centerBoxY2, buttonWidth, buttonHeight);
   rect(centerBoxX3, centerBoxY3, buttonWidth, buttonHeight);
 
-  fill(229, 146, 19);
-  noStroke();
-  textSize(22);
-  text("allow", 100, 329);
-  text("low", 308, 329);
-  text("wee", 499, 329);
+  allow.display();
+  low.display();
+  wee.display();
+  
 }
 
-function halloween(){
-  
-  
+function moveUp() {
+
 }
+
 
 function mousePressed() {
 
