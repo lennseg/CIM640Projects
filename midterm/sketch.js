@@ -3,35 +3,37 @@
 var halloween = [];
 
 var allow = {
-  x: 100,
+  x: 123,
   y: 329,
   display: function() {
     fill(229, 146, 19);
     noStroke();
     textSize(22);
+    textAlign(CENTER);
     text("allow", this.x, this.y);
   }
 };
 
 var low = {
-  x: 308,
+  x: 324,
   y: 329,
   display: function() {
     fill(229, 146, 19);
     noStroke();
     textSize(22);
-    
+    textAlign(CENTER);
     text("low", this.x, this.y);
   }
 };
 
 var wee = {
-  x: 499,
+  x: 515,
   y: 329,
   display: function() {
     fill(229, 146, 19);
     noStroke();
     textSize(22);
+    textAlign(CENTER);
     text("wee", this.x, this.y);
   }
 };
@@ -50,10 +52,6 @@ var centerBoxY2 = 320;
 var centerBoxX3 = 515;
 var centerBoxY3 = 320;
 
-var allowDown = false;
-var lowDown = false;
-var weeDown = false;
-
 
 function setup() {
   createCanvas(630, 390);
@@ -62,9 +60,8 @@ function setup() {
   bg = loadImage("images/ghosts.jpg");
 
   halloween[0] = {
-    x: 60,
+    x: 80,
     y: 100,
-
     display: function() {
       fill(229, 146, 19);
       noStroke();
@@ -74,7 +71,7 @@ function setup() {
   };
 
   halloween[1] = {
-    x: 120,
+    x: 135,
     y: 100,
     display: function() {
       fill(229, 146, 19);
@@ -85,7 +82,7 @@ function setup() {
   };
 
   halloween[2] = {
-    x: 180,
+    x: 190,
     y: 100,
     display: function() {
       fill(229, 146, 19);
@@ -96,7 +93,7 @@ function setup() {
   };
 
   halloween[3] = {
-    x: 240,
+    x: 245,
     y: 100,
     display: function() {
       fill(229, 146, 19);
@@ -107,7 +104,7 @@ function setup() {
   };
 
   halloween[4] = {
-    x: 300,
+    x: 303,
     y: 100,
     display: function() {
       fill(229, 146, 19);
@@ -118,7 +115,7 @@ function setup() {
   };
 
   halloween[5] = {
-    x: 360,
+    x: 365,
     y: 100,
     display: function() {
       fill(229, 146, 19);
