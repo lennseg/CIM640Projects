@@ -55,7 +55,7 @@ function draw() {
 
 }
 
-function mousePressed (){
+function mouseClicked (){
   // Check if mouse is inside the bux
   var d1 = dist(mouseX, mouseY, centerBoxX1, centerBoxY1);
   var d2 = dist(mouseX, mouseY, centerBoxX2, centerBoxY2);
@@ -69,5 +69,5 @@ function mousePressed (){
   var d8 = dist(mouseX, mouseY, centerBoxX8, centerBoxY8);
   var d9 = dist(mouseX, mouseY, centerBoxX9, centerBoxY9);
   
- 
+ if (d1 < boxWidth) {console.log("it is in box 1!")};
 }
