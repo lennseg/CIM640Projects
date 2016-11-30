@@ -42,6 +42,7 @@ function draw() {
   background(59,86,90);
   stroke(255);
   strokeWeight(2);
+  rectMode(CENTER);
   scribble.scribbleRect( centerBoxX1, centerBoxY1, boxWidth, boxHeight ); //top left box
   scribble.scribbleRect( centerBoxX2, centerBoxY2, boxWidth, boxHeight ); //top middle box
   scribble.scribbleRect( centerBoxX3, centerBoxY3, boxWidth, boxHeight ); //top right box
