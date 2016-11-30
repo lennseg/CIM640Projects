@@ -1,8 +1,6 @@
 // tic tac toe game
 // by lennse garcia
 
-// player 1 draws a cross
-// player 2 draws a circle
 
 var scribble = new Scribble();
 scribble.bowing = 2;
