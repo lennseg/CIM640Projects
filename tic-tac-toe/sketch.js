@@ -14,9 +14,9 @@ function draw() {
   scribble.scribbleRect( 250, 100, 155, 155 ); //top middle box
   scribble.scribbleRect( 400, 100, 155, 155 ); //top right box
   scribble.scribbleRect( 100, 250, 155, 155 ); //middle left box
-  scribble.scribbleRect( 250, 250, 155, 155 ); //middle middle box
+  scribble.scribbleRect( 250, 250, 155, 155 ); //middle box
   scribble.scribbleRect( 400, 250, 155, 155 ); //middle right box
-  scribble.scribbleRect( 100, 400, 155, 155 ); //bottom middle box
+  scribble.scribbleRect( 100, 400, 155, 155 ); //bottom left box
   scribble.scribbleRect( 250, 400, 155, 155 ); //bottom middle box
   scribble.scribbleRect( 400, 400, 155, 155 ); //bottom right box
 
