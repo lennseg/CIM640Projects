@@ -69,4 +69,12 @@ function mouseClicked (){
   var d9 = dist(mouseX, mouseY, centerBoxX9, centerBoxY9);
   
  if (d1 < boxWidth) {console.log("it is in box 1!")};
+ if (d2 < boxWidth) {console.log("it is in box 2!")};
+ if (d3 < boxWidth) {console.log("it is in box 3!")};
+ if (d4 < boxWidth) {console.log("it is in box 4!")};
+ if (d5 < boxWidth) {console.log("it is in box 5!")};
+ if (d6 < boxWidth) {console.log("it is in box 6!")};
+ if (d7 < boxWidth) {console.log("it is in box 7!")};
+ if (d8 < boxWidth) {console.log("it is in box 8!")};
+ if (d9 < boxWidth) {console.log("it is in box 9!")};
 }
