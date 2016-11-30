@@ -8,22 +8,69 @@ var scribble = new Scribble();
 scribble.bowing = 2;
 scribble.roughness = 2;
 
+var boxWidth = 155;
+var boxHeight = 155;
+
+var centerBoxX1 = 100;
+var centerBoxY1 = 100;
+var centerBoxX2 = 250;
+var centerBoxY2 = 100;
+var centerBoxX3 = 400;
+var centerBoxY3 = 100;
+
+var centerBoxX4 = 100;
+var centerBoxY4 = 250;
+var centerBoxX5 = 250;
+var centerBoxY5 = 250;
+var centerBoxX6 = 400;
+var centerBoxY6 = 250;
+
+var centerBoxX7 = 100;
+var centerBoxY7 = 400;
+var centerBoxX8 = 250;
+var centerBoxY8 = 400;
+var centerBoxX9 = 400;
+var centerBoxY9 = 400;
+
+
 function setup() {
   createCanvas(500,500);
+  
 }
 
 function draw() {
   background(59,86,90);
   stroke(255);
-  strokeWeight(3);
-  scribble.scribbleRect( 100, 100, 155, 155 ); //top left box
-  scribble.scribbleRect( 250, 100, 155, 155 ); //top middle box
-  scribble.scribbleRect( 400, 100, 155, 155 ); //top right box
-  scribble.scribbleRect( 100, 250, 155, 155 ); //middle left box
-  scribble.scribbleRect( 250, 250, 155, 155 ); //middle box
-  scribble.scribbleRect( 400, 250, 155, 155 ); //middle right box
-  scribble.scribbleRect( 100, 400, 155, 155 ); //bottom left box
-  scribble.scribbleRect( 250, 400, 155, 155 ); //bottom middle box
-  scribble.scribbleRect( 400, 400, 155, 155 ); //bottom right box
+  strokeWeight(2);
+  //rectMode(CENTER);
+  scribble.scribbleRect( centerBoxX1, centerBoxY1, boxWidth, boxHeight ); //top left box
+  scribble.scribbleRect( centerBoxX2, centerBoxY2, boxWidth, boxHeight ); //top middle box
+  scribble.scribbleRect( centerBoxX3, centerBoxY3, boxWidth, boxHeight ); //top right box
+  scribble.scribbleRect( centerBoxX4, centerBoxY4, boxWidth, boxHeight ); //middle left box
+  scribble.scribbleRect( centerBoxX5, centerBoxY5, boxWidth, boxHeight ); //middle box
+  scribble.scribbleRect( centerBoxX6, centerBoxY6, boxWidth, boxHeight ); //middle right box
+  scribble.scribbleRect( centerBoxX7, centerBoxY7, boxWidth, boxHeight ); //bottom left box
+  scribble.scribbleRect( centerBoxX8, centerBoxY8, boxWidth, boxHeight ); //bottom middle box
+  scribble.scribbleRect( centerBoxX9, centerBoxY9, boxWidth, boxHeight ); //bottom right box
 
+}
+
+function mousePressed (){
+  // Check if mouse is inside the bux
+  var d1 = dist(mouseX, mouseY, centerBoxX1, centerBoxY1);
+  var d2 = dist(mouseX, mouseY, centerBoxX2, centerBoxY2);
+  var d3 = dist(mouseX, mouseY, centerBoxX3, centerBoxY3);
+  
+  var d4 = dist(mouseX, mouseY, centerBoxX4, centerBoxY4);
+  var d5 = dist(mouseX, mouseY, centerBoxX5, centerBoxY5);
+  var d6 = dist(mouseX, mouseY, centerBoxX6, centerBoxY6);
+  
+  var d7 = dist(mouseX, mouseY, centerBoxX7, centerBoxY7);
+  var d8 = dist(mouseX, mouseY, centerBoxX8, centerBoxY8);
+  var d9 = dist(mouseX, mouseY, centerBoxX9, centerBoxY9);
+  
+  if (d1 < 50) {
+    
+    }
+ 
 }
