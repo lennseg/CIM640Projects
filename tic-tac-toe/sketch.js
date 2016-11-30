@@ -57,25 +57,16 @@ function draw() {
 
 function mouseClicked (){
   // Check if mouse is inside the bux
-  var d1 = dist(mouseX, mouseY, centerBoxX1, centerBoxY1);
-  var d2 = dist(mouseX, mouseY, centerBoxX2, centerBoxY2);
-  var d3 = dist(mouseX, mouseY, centerBoxX3, centerBoxY3);
+  var d1 = dist(mouseX, mouseY, centerBoxX1, centerBoxY1);  //if (d1 < boxWidth) {console.log("it is in box 1!")};
+  var d2 = dist(mouseX, mouseY, centerBoxX2, centerBoxY2);  //if (d2 < boxWidth) {console.log("it is in box 2!")};
+  var d3 = dist(mouseX, mouseY, centerBoxX3, centerBoxY3);  //if (d3 < boxWidth) {console.log("it is in box 3!")};
   
-  var d4 = dist(mouseX, mouseY, centerBoxX4, centerBoxY4);
-  var d5 = dist(mouseX, mouseY, centerBoxX5, centerBoxY5);
-  var d6 = dist(mouseX, mouseY, centerBoxX6, centerBoxY6);
+  var d4 = dist(mouseX, mouseY, centerBoxX4, centerBoxY4);  //if (d4 < boxWidth) {console.log("it is in box 4!")};
+  var d5 = dist(mouseX, mouseY, centerBoxX5, centerBoxY5);  //if (d5 < boxWidth) {console.log("it is in box 5!")};
+  var d6 = dist(mouseX, mouseY, centerBoxX6, centerBoxY6);  //if (d6 < boxWidth) {console.log("it is in box 6!")};
   
-  var d7 = dist(mouseX, mouseY, centerBoxX7, centerBoxY7);
-  var d8 = dist(mouseX, mouseY, centerBoxX8, centerBoxY8);
-  var d9 = dist(mouseX, mouseY, centerBoxX9, centerBoxY9);
+  var d7 = dist(mouseX, mouseY, centerBoxX7, centerBoxY7);  //if (d7 < boxWidth) {console.log("it is in box 7!")};
+  var d8 = dist(mouseX, mouseY, centerBoxX8, centerBoxY8);  //if (d8 < boxWidth) {console.log("it is in box 8!")};
+  var d9 = dist(mouseX, mouseY, centerBoxX9, centerBoxY9);  //if (d9 < boxWidth) {console.log("it is in box 9!")};
   
- if (d1 < boxWidth) {console.log("it is in box 1!")};
- if (d2 < boxWidth) {console.log("it is in box 2!")};
- if (d3 < boxWidth) {console.log("it is in box 3!")};
- if (d4 < boxWidth) {console.log("it is in box 4!")};
- if (d5 < boxWidth) {console.log("it is in box 5!")};
- if (d6 < boxWidth) {console.log("it is in box 6!")};
- if (d7 < boxWidth) {console.log("it is in box 7!")};
- if (d8 < boxWidth) {console.log("it is in box 8!")};
- if (d9 < boxWidth) {console.log("it is in box 9!")};
 }
