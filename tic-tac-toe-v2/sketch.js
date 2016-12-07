@@ -6,24 +6,88 @@ var scribble = new Scribble();
 scribble.bowing = 2;
 scribble.roughness = 2;
 
-var box0 = new Boxes(100,100);
-var box1 = new Boxes(250,100);
-var box2 = new Boxes(400,100);
-var box3 = new Boxes(100,250);
-var box4 = new Boxes(250,250);
-var box5 = new Boxes(400,250);
-var box6 = new Boxes(100,400);
-var box7 = new Boxes(250,400);
-var box8 = new Boxes(400,400);
+var box0 = new Boxes(100, 100);
+var box1 = new Boxes(250, 100);
+var box2 = new Boxes(400, 100);
+var box3 = new Boxes(100, 250);
+var box4 = new Boxes(250, 250);
+var box5 = new Boxes(400, 250);
+var box6 = new Boxes(100, 400);
+var box7 = new Boxes(250, 400);
+var box8 = new Boxes(400, 400);
+
+var currentPlayer = "";
+
+//var box = [];
+
+//var box[0] = new Boxes(100,100);
 
 
 function setup() {
-   createCanvas(500,500);
+  createCanvas(500, 500);
 
 }
 
 function draw() {
-  background(59,86,90);
+  background(59, 86, 90);
+  
+if(mouseIsPressed==true){
+    if(box0.check(mouseX,mouseY)==true){
+      console.log("I'm clicking box 1");
+      box0.currentPlay=currentPlayer;
+      console.log(box0.currentPlay);
+    }
+    
+    if(box1.check(mouseX, mouseY)==true){
+      console.log("I'm clicking box 2");
+      box1.currentPlay=currentPlayer;
+      console.log(box1.currentPlay);
+    }
+    
+    if(box2.check(mouseX, mouseY)==true){
+      console.log("I'm clicking box 3");
+      box0.currentPlay=currentPlayer;
+      console.log(box0.currentPlay);
+    }
+    
+    if(box3.check(mouseX, mouseY)==true){
+      console.log("I'm clicking box 4");
+      box0.currentPlay=currentPlayer;
+      console.log(box0.currentPlay);
+    }
+    
+    if(box4.check(mouseX, mouseY)==true){
+      console.log("I'm clicking box 5");
+      box0.currentPlay=currentPlayer;
+      console.log(box0.currentPlay);
+    }
+    
+    if(box5.check(mouseX, mouseY)==true){
+      console.log("I'm clicking box 6");
+      box0.currentPlay=currentPlayer;
+      console.log(box0.currentPlay);
+    }
+    
+    if(box6.check(mouseX, mouseY)==true){
+      console.log("I'm clicking box 7");
+      box0.currentPlay=currentPlayer;
+      console.log(box0.currentPlay);
+    }
+    
+    if(box7.check(mouseX, mouseY)==true){
+      console.log("I'm clicking box 8");
+      box0.currentPlay=currentPlayer;
+      console.log(box0.currentPlay);
+    }
+    
+    if(box8.check(mouseX, mouseY)==true){
+      console.log("I'm clicking box 9");
+      box0.currentPlay=currentPlayer;
+      console.log(box0.currentPlay);
+    }
+    
+  }
+  
   
   box0.display();
   box1.display();
@@ -34,69 +98,54 @@ function draw() {
   box6.display();
   box7.display();
   box8.display();
-  
-  }
+
+}
 
 
-function Boxes(tempX, tempY){
+function Boxes(tempX, tempY) {
   this.x = tempX;
   this.y = tempY;
-  
-  
-  this.display = function(){
+  this.boxSize = 155;
+  this.currentPlay = "";
+
+
+  this.display = function() {
     stroke(255);
     strokeWeight(2);
     rectMode(CENTER);
-    scribble.scribbleRect(this.x, this.y, 155, 155);
+    scribble.scribbleRect(this.x, this.y, this.boxSize, this.boxSize);
+
+    if (this.currentPlay == "X") {
+      //draw x
+      textSize(32);
+      text("X", this.x, this.y);
+    } else if (this.currentPlay == "O") {
+      //draw o
+      textSize(32);
+      text("O", this.x, this.y);
+    }
   }
-  
+
+  this.check = function(userX, userY) {
+    var distbox = dist(userX, userY, this.x, this.y);
+
+    if (distbox < this.boxSize / 2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
-function mouseClicked (){
-  // Check if mouse is inside the box
-  var distbox0 = dist(mouseX, mouseY, box0.x, box0.y);
-  if (distbox0 < 155/2) {
-    console.log("it is in box 1!"); 
-    };
 
-  var distbox1 = dist(mouseX, mouseY, box1.x, box1.y);
-  if (distbox1 < 155/2) {
-    console.log("it is in box 2!"); 
-    };
-    
-  var distbox2 = dist(mouseX, mouseY, box2.x, box2.y);
-  if (distbox2 < 155/2) {
-    console.log("it is in box 3!"); 
-    };
-    
-  var distbox3 = dist(mouseX, mouseY, box3.x, box3.y);
-  if (distbox3 < 155/2) {
-    console.log("it is in box 4!"); 
-    };
-    
-  var distbox4 = dist(mouseX, mouseY, box4.x, box4.y);
-  if (distbox4 < 155/2) {
-    console.log("it is in box 5!"); 
-    };
-    
-  var distbox5 = dist(mouseX, mouseY, box5.x, box5.y);
-  if (distbox5 < 155/2) {
-    console.log("it is in box 6!"); 
-    };
-    
-  var distbox6 = dist(mouseX, mouseY, box6.x, box6.y);
-  if (distbox6 < 155/2) {
-    console.log("it is in box 7!"); 
-    };
-    
-  var distbox7 = dist(mouseX, mouseY, box7.x, box7.y);
-  if (distbox7 < 155/2) {
-    console.log("it is in box 8!"); 
-    };
-  
-  var distbox8 = dist(mouseX, mouseY, box8.x, box8.y);
-  if (distbox8 < 155/2) {
-    console.log("it is in box 9!"); 
-    };
-    
+function keyPressed() {
+
+  if (key == "X") {
+    currentPlayer = "X";
+  }
+  if (key == "O") {
+    currentPlayer = "O";
+  }
+
+  console.log(currentPlayer);
 }
