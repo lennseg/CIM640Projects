@@ -1,4 +1,4 @@
-// tic tac toe game v2
+// tic tac toe game v3// ARRAYS
 // by lennse garcia
 
 var scribble = new Scribble();
