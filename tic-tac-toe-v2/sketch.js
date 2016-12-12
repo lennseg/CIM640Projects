@@ -18,10 +18,6 @@ var box8 = new Boxes(400, 400);
 
 var currentPlayer = "";
 
-//var box = [];
-
-//var box[0] = new Boxes(100,100);
-
 
 function setup() {
   createCanvas(500, 500);
@@ -46,44 +42,44 @@ if(mouseIsPressed==true){
     
     if(box2.check(mouseX, mouseY)==true){
       console.log("I'm clicking box 3");
-      box0.currentPlay=currentPlayer;
-      console.log(box0.currentPlay);
+      box2.currentPlay=currentPlayer;
+      console.log(box2.currentPlay);
     }
     
     if(box3.check(mouseX, mouseY)==true){
       console.log("I'm clicking box 4");
-      box0.currentPlay=currentPlayer;
-      console.log(box0.currentPlay);
+      box3.currentPlay=currentPlayer;
+      console.log(box3.currentPlay);
     }
     
     if(box4.check(mouseX, mouseY)==true){
       console.log("I'm clicking box 5");
-      box0.currentPlay=currentPlayer;
-      console.log(box0.currentPlay);
+      box4.currentPlay=currentPlayer;
+      console.log(box4.currentPlay);
     }
     
     if(box5.check(mouseX, mouseY)==true){
       console.log("I'm clicking box 6");
-      box0.currentPlay=currentPlayer;
-      console.log(box0.currentPlay);
+      box5.currentPlay=currentPlayer;
+      console.log(box5.currentPlay);
     }
     
     if(box6.check(mouseX, mouseY)==true){
       console.log("I'm clicking box 7");
-      box0.currentPlay=currentPlayer;
-      console.log(box0.currentPlay);
+      box6.currentPlay=currentPlayer;
+      console.log(box6.currentPlay);
     }
     
     if(box7.check(mouseX, mouseY)==true){
       console.log("I'm clicking box 8");
-      box0.currentPlay=currentPlayer;
-      console.log(box0.currentPlay);
+      box7.currentPlay=currentPlayer;
+      console.log(box7.currentPlay);
     }
     
     if(box8.check(mouseX, mouseY)==true){
       console.log("I'm clicking box 9");
-      box0.currentPlay=currentPlayer;
-      console.log(box0.currentPlay);
+      box8.currentPlay=currentPlayer;
+      console.log(box8.currentPlay);
     }
     
   }
@@ -116,13 +112,18 @@ function Boxes(tempX, tempY) {
     scribble.scribbleRect(this.x, this.y, this.boxSize, this.boxSize);
 
     if (this.currentPlay == "X") {
-      //draw x
-      textSize(32);
-      text("X", this.x, this.y);
+      //draw X
+      stroke(255);
+      strokeWeight(2);
+      scribble.scribbleLine( x1, y1, x2, y2 );
+      scribble.scribbleLine( x1, y1, x2, y2 );
+      
     } else if (this.currentPlay == "O") {
-      //draw o
-      textSize(32);
-      text("O", this.x, this.y);
+      //draw O
+      stroke(255);
+      strokeWeight(2);
+      ellipseMode(CENTER)
+      scribble.scribbleEllipse( this.x, this.y, 75, 75);
     }
   }
 
