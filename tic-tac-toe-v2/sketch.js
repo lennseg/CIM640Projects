@@ -113,17 +113,16 @@ function Boxes(tempX, tempY) {
 
     if (this.currentPlay == "X") {
       //draw X
-      stroke(255);
-      strokeWeight(2);
-      scribble.scribbleLine( x1, y1, x2, y2 );
-      scribble.scribbleLine( x1, y1, x2, y2 );
+      textAlign(CENTER)
+      textSize(50);
+      text("X", this.x, this.y);
       
     } else if (this.currentPlay == "O") {
       //draw O
       stroke(255);
       strokeWeight(2);
       ellipseMode(CENTER)
-      scribble.scribbleEllipse( this.x, this.y, 75, 75);
+      scribble.scribbleEllipse( this.x, this.y, 50, 50);
     }
   }
 
