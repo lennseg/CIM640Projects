@@ -18,6 +18,8 @@ var box8 = new Boxes(400, 400);
 
 var currentPlayer = "";
 
+var halfBox = this.boxSize/2;
+
 
 function setup() {
   createCanvas(500, 500);
@@ -113,9 +115,9 @@ function Boxes(tempX, tempY) {
 
     if (this.currentPlay == "X") {
       //draw X
-      textAlign(CENTER)
-      textSize(50);
-      text("X", this.x, this.y);
+      stroke(255);
+      strokeWeight(2);
+      scribble.scribbleLine(this.x - halfBox, this.y - halfBox, this.x + halfBox, this.y + halfBox);
       
     } else if (this.currentPlay == "O") {
       //draw O
