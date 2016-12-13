@@ -18,7 +18,6 @@ var box8 = new Boxes(400, 400);
 
 var currentPlayer = "";
 
-var halfBox = this.boxSize/2;
 
 
 function setup() {
@@ -105,6 +104,8 @@ function Boxes(tempX, tempY) {
   this.y = tempY;
   this.boxSize = 155;
   this.currentPlay = "";
+  
+  var halfBox = this.boxSize/2;
 
 
   this.display = function() {
@@ -118,13 +119,14 @@ function Boxes(tempX, tempY) {
       stroke(255);
       strokeWeight(2);
       scribble.scribbleLine(this.x - halfBox, this.y - halfBox, this.x + halfBox, this.y + halfBox);
+      scribble.scribbleLine(this.x + halfBox, this.y - halfBox, this.x - halfBox, this.y + halfBox);
       
     } else if (this.currentPlay == "O") {
       //draw O
       stroke(255);
       strokeWeight(2);
       ellipseMode(CENTER)
-      scribble.scribbleEllipse( this.x, this.y, 50, 50);
+      scribble.scribbleEllipse( this.x, this.y, 150, 150);
     }
   }
 
