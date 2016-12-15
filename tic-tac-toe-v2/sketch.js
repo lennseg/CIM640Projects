@@ -6,6 +6,7 @@ scribble.roughness = 1;
 var boxes = new Array(3);
 var sizeOfBox = 150;
 var currentPlayer = "";
+var playerWinner = "";
 
 function setup() {
     createCanvas(500, 500);
@@ -13,12 +14,19 @@ function setup() {
         boxes[i] = new Array(3);
         for (var j = 0; j < 3; j++) {
             boxes[i][j] = new Boxes(100 + i * 150, 100 + j * 150);
+            boxes[i][j].currentPlay = i*3 + j;
         }
     }
 }
 
 function draw() {
     background(59, 86, 90);
+    if(playerWinner != "")
+    {
+        textAlign(CENTER);
+        textSize(50);
+        text("Player " + playerWinner + " wins!", 250, 250);
+    }
     if (mouseIsPressed == true) {
         for (var i = 0; i < 3; i++) {
             for (var j = 0; j < 3; j++) {
@@ -26,7 +34,10 @@ function draw() {
                     console.log("I'm clicking box " + i + ", " + j);
                     boxes[i][j].currentPlay = currentPlayer;
                     if(checkWin() == true)
+                    {
                         console.log("Player " + currentPlayer + " wins!");
+                        playerWinner = currentPlayer;
+                    }
                     console.log(boxes[i][j].currentPlay);
                 }
             }
@@ -79,7 +90,7 @@ function Boxes(tempX, tempY) {
 function checkWin() {
     if (checkHorizontal()) return true;
     if (checkVertical()) return true;
-    if (checkHorizontal()) return true;
+    if (checkDiagonal()) return true;
 }
 
 function checkHorizontal() {
@@ -90,8 +101,8 @@ function checkHorizontal() {
 
 function checkVertical() {
     if (boxes[0][0].currentPlay == boxes[1][0].currentPlay && boxes[1][0].currentPlay == boxes[2][0].currentPlay) return true;
-    if (boxes[0][0].currentPlay == boxes[1][0].currentPlay && boxes[1][0].currentPlay == boxes[2][0].currentPlay) return true;
-    if (boxes[0][0].currentPlay == boxes[1][0].currentPlay && boxes[1][0].currentPlay == boxes[2][0].currentPlay) return true;
+    if (boxes[0][1].currentPlay == boxes[1][1].currentPlay && boxes[1][1].currentPlay == boxes[2][1].currentPlay) return true;
+    if (boxes[0][2].currentPlay == boxes[1][2].currentPlay && boxes[1][2].currentPlay == boxes[2][2].currentPlay) return true;
 }
 
 function checkDiagonal() {
