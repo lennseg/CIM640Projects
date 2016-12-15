@@ -3,8 +3,8 @@
 
 var scribble = new Scribble();
 
-scribble.bowing = 2;
-scribble.roughness = 2;
+scribble.bowing = 0;
+scribble.roughness = 1.5;
 
 var box0 = new Boxes(100, 100);
 var box1 = new Boxes(250, 100);
@@ -22,10 +22,11 @@ var currentPlayer = "";
 
 function setup() {
   createCanvas(500, 500);
-
 }
 
 function draw() {
+    
+    randomSeed(8);
   background(59, 86, 90);
   
 if(mouseIsPressed==true){
@@ -110,7 +111,8 @@ function Boxes(tempX, tempY) {
 
   this.display = function() {
     stroke(255);
-    strokeWeight(2);
+      
+    strokeWeight(7);
     rectMode(CENTER);
     scribble.scribbleRect(this.x, this.y, this.boxSize, this.boxSize);
 
