@@ -25,15 +25,15 @@ function draw() {
                 if (boxes[i][j].check(mouseX, mouseY) == true) {
                     console.log("I'm clicking box " + i + ", " + j);
                     boxes[i][j].currentPlay = currentPlayer;
+                    if(checkWin() == true)
+                        console.log("Player " + currentPlayer + " wins!");
                     console.log(boxes[i][j].currentPlay);
                 }
             }
         }
     }
-    for(var i = 0; i < 3; i++)
-    {
-        for(var j = 0; j < 3; j++)
-        {
+    for (var i = 0; i < 3; i++) {
+        for (var j = 0; j < 3; j++) {
             boxes[i][j].display();
         }
     }
@@ -74,6 +74,29 @@ function Boxes(tempX, tempY) {
             return false;
         }
     }
+}
+
+function checkWin() {
+    if (checkHorizontal()) return true;
+    if (checkVertical()) return true;
+    if (checkHorizontal()) return true;
+}
+
+function checkHorizontal() {
+    if (boxes[0][0].currentPlay == boxes[0][1].currentPlay && boxes[0][1].currentPlay == boxes[0][2].currentPlay) return true;
+    if (boxes[1][0].currentPlay == boxes[1][1].currentPlay && boxes[1][1].currentPlay == boxes[1][2].currentPlay) return true;
+    if (boxes[2][0].currentPlay == boxes[2][1].currentPlay && boxes[2][1].currentPlay == boxes[2][2].currentPlay) return true;
+}
+
+function checkVertical() {
+    if (boxes[0][0].currentPlay == boxes[1][0].currentPlay && boxes[1][0].currentPlay == boxes[2][0].currentPlay) return true;
+    if (boxes[0][0].currentPlay == boxes[1][0].currentPlay && boxes[1][0].currentPlay == boxes[2][0].currentPlay) return true;
+    if (boxes[0][0].currentPlay == boxes[1][0].currentPlay && boxes[1][0].currentPlay == boxes[2][0].currentPlay) return true;
+}
+
+function checkDiagonal() {
+    if (boxes[0][0].currentPlay == boxes[1][1].currentPlay && boxes[1][1].currentPlay == boxes[2][2].currentPlay) return true;
+    if (boxes[0][2].currentPlay == boxes[1][1].currentPlay && boxes[1][1].currentPlay == boxes[2][0].currentPlay) return true;
 }
 
 function keyPressed() {
