@@ -1,4 +1,5 @@
 //Midterm: Halloween
+//by lennse garcia
 
 var halloween = [];
 
